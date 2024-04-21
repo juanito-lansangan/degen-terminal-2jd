@@ -170,7 +170,7 @@ export function UserAuthForm({
     setIsLoading(true);
 
     await supabase.auth.resetPasswordForEmail(email, {
-      redirectTo: `${process.env.NEXT_PUBLIC_URL}/login`,
+      redirectTo: `/login`,
     });
     setUserMessage("Password reset email sent.");
     setIsLoading(false);
